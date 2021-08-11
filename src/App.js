@@ -1,5 +1,4 @@
 import React, { Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 // To use react and access/manipulate State we need to use Classes
@@ -12,22 +11,32 @@ class App extends Component { // Component class gives us the setState method
 
     this.state = {
       
-      monsters: [
+      monsters: [ // empty array
         
-        { name: 'Frankenstein',
-          id: 'a1'
-        },
-        { name: 'Dracula',
-          id: 'a2'
-        },
-        { name: 'Bad Leroy Brown',
-          id: 'a3'
-        }
+        // { name: 'Frankenstein',
+        //   id: 'a1'
+        // },
+        // { name: 'Dracula',
+        //   id: 'a2'
+        // },
+        // { name: 'Bad Leroy Brown',
+        //   id: 'a3'
+        // }
       ]
     };
   }
 
+// - LifeCycle Methods are methods that get called at different stages of when a component gets rendered
+//      - "Mounting" is whenever React renders a Component onto the DOM for the first time
+//          - when it does that, it calls whatever block of code is inside the method "componentDidMount() {...}"
 
+componentDidMount() {
+
+  fetch('https://jsonplaceholder.typicode.com/users') // fetch() returns a promise as a response
+    .then(response => response.json())
+    // .then(users => console.log(users));
+    .then(users => this.setState({ monsters: users })); // set our array monsters to contain what is received in the response 'users'
+}
   render() {
     return (
       <div className="App">

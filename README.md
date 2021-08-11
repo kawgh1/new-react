@@ -26,8 +26,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 2. Decide on the State and where it lives
 3. What changes when State changes
 
-
- - State is a Javascript object with properties that we can access and manipulate anywhere inside our class
+- To use React and access/manipulate State we need to use Classes (or Hooks)
+- 
+- State is a Javascript object with properties that we can access and manipulate anywhere inside our class
 
 - class App extends Component { // Component class gives us the setState method
 
@@ -43,13 +44,13 @@ File: App.js
             monsters: [
                 
                 { name: 'Frankenstein',
-                id: 'a1'
+                    id: 'a1'
                 },
                 { name: 'Dracula',
-                id: 'a2'
+                    id: 'a2'
                 },
                 { name: 'Bad Leroy Brown',
-                id: 'a3'
+                    id: 'a3'
                 }
             ]
             };
@@ -71,6 +72,18 @@ So this code starts the app with a State already in play, the monsters array
 
 Class App has a method called render();
 
+
+### LifeCycle Methods
+- LifeCycle Methods are methods that get called at different stages of when a component gets rendered
+- "Mounting" is whenever React renders a Component onto the DOM for the first time
+    - when it does that, it calls whatever block of code is inside the method "componentDidMount() {...}"
+
+
+    - componentDidCatch
+    - componentDidMount
+    - componentWillMount
+    - componentWillReceiveProps
+    - etc.
 
 
 ### VS Code fonts and settings
@@ -138,4 +151,4 @@ Ex)
 
 - Install a package globally: **npm install package -g == yarn global add package**
 
-- To use React and access/manipulate State we need to use Class (or Hooks)
+
