@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import './App.css';
 
+import { CardList } from './components/card-list/card-list.component';
+
 // To use react and access/manipulate State we need to use Classes
 
 // State is a Javascript object with properties that we can access and manipulate anywhere *inside our class*
@@ -11,8 +13,9 @@ class App extends Component { // Component class gives us the setState method
 
     this.state = {
       
-      monsters: [ // empty array
-        
+      monsters: [] // empty array
+
+      // monsters: [  
         // { name: 'Frankenstein',
         //   id: 'a1'
         // },
@@ -22,7 +25,8 @@ class App extends Component { // Component class gives us the setState method
         // { name: 'Bad Leroy Brown',
         //   id: 'a3'
         // }
-      ]
+      // 
+
     };
   }
 
@@ -40,9 +44,9 @@ componentDidMount() {
   render() {
     return (
       <div className="App">
-       {
-         this.state.monsters.map(monster => <h1>{ monster.name }</h1>)
-       }
+          <CardList monsters={ this.state.monsters } /> 
+              
+       
      </div>
     )
   }

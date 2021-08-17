@@ -92,7 +92,7 @@ Class App has a method called render();
 
 - Editor: Font Ligatures - enables/disables font ligatures
 
-- Fonts: 'FiraCode', Consolas, 'Courier New', monospace
+- Fonts: Operator Mono Lig, Consolas, 'Courier New', monospace
 
 ### Extensions
 
