@@ -10,8 +10,20 @@
 	backface-visibility: hidden;
 	transform: translateZ(0);
 	transition: transform 0.25s ease-out;
+
+	width: 80%;
+	height: 80%;
+
+	font-size: 14px;
 }
 
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.2rem;
+}
 .card-container:hover {
 	transform: scale(1.05);
 }

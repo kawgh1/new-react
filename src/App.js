@@ -62,6 +62,8 @@ componentDidMount() {
     return (
       <div className="App">
 
+          <h1> Monsters Rolodex </h1>
+
           {/* <input type='search' placeholder='search monsters..' 
                   onChange={e => this.setState({ searchField: e.target.value }) }/> */}
           {/* <CardList monsters={ this.state.monsters } />  */}

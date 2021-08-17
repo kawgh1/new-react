@@ -26,6 +26,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 2. Decide on the State and where it lives
 3. What changes when State changes
 
+### Method Binding in React
+- **A good rule of thumb is this: Use arrow functions on ANY class methods you define and aren't from React (i.e. render(), componentDidMount(), etc).**
+
+    - For more info: https://reactjs.org/docs/handling-events.html
+
 ### React Function vs Class Components
 
 - Functional Components don't have access to State because they don't have a Constructor, which is a Class method
