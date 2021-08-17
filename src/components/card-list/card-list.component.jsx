@@ -3,6 +3,7 @@ import './card-list.styles.css';
 import { Card } from '../card/card.component.jsx'
 
 
+// named export
 export const CardList = (props) => (
 
     <div className="card-list"> 

@@ -26,6 +26,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 2. Decide on the State and where it lives
 3. What changes when State changes
 
+### React Function vs Class Components
+
+- Functional Components don't have access to State because they don't have a Constructor, which is a Class method
+- Functional Components don't have access to Life Cycle Methods - componentDidMount(), etc.
+- Functional Components don't have internal State
+
+- A Functional Component is just a Functional Component that receives some props and returns some HTML
+    - Things to remember:
+        - If you think you won't need internal State nor access to Life Cycle Methods, then just use a Functional Component
+            - Because it's easier to read, easier to test and potentially smaller/ more performant
+
 - To use React and access/manipulate State we need to use Classes (or Hooks)
 - 
 - State is a Javascript object with properties that we can access and manipulate anywhere inside our class
